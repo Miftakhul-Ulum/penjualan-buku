@@ -1,6 +1,8 @@
 package com.project101.aplikasibuku.model;
 
-public class ModelBukuPopuler {
+import java.io.Serializable;
+
+public class ModelBukuPopuler implements Serializable {
     private String buku;
     private String gambar;
     private String deskripsi;

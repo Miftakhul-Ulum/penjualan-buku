@@ -1,4 +1,4 @@
-package com.project101.aplikasibuku;
+package com.project101.aplikasibuku.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+import com.project101.aplikasibuku.R;
 import com.project101.aplikasibuku.adapter.AdapterBukuPopuler;
 import com.project101.aplikasibuku.adapter.AdapterListBuku;
 import com.project101.aplikasibuku.model.ModelBukuPopuler;
