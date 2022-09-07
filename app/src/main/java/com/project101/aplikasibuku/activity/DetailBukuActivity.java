@@ -17,7 +17,7 @@ public class DetailBukuActivity extends AppCompatActivity {
     private TextView judulBuku, harga, addBarang, deskripsi;
     private ImageView gambar, plusBtn, minusBtn;
     private ModelBukuPopuler object;
-    int jumlahOrder = 10;
+    int jumlahOrder = 1;
     private ManagementCart managementCart;
 
     @Override
@@ -44,7 +44,7 @@ public class DetailBukuActivity extends AppCompatActivity {
         plusBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                jumlahOrder=jumlahOrder++;
+                jumlahOrder=jumlahOrder+1;
                 addBarang.setText(String.valueOf(jumlahOrder));
 
             }
@@ -53,7 +53,7 @@ public class DetailBukuActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (jumlahOrder>1){
-                    jumlahOrder = jumlahOrder--;
+                    jumlahOrder = jumlahOrder+1;
                 }
                 addBarang.setText(String.valueOf(jumlahOrder));
             }

@@ -1,5 +1,6 @@
 package com.project101.aplikasibuku.adapter;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,9 +23,9 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.MyViewHolder> 
     private ManagementCart managementCart;
     private ChangeNumberItemListener changeNumberItemListener;
 
-    public CartAdapter(ArrayList<ModelBukuPopuler> modelBukuPopulers, ManagementCart managementCart, ChangeNumberItemListener changeNumberItemListener) {
+    public CartAdapter(ArrayList<ModelBukuPopuler> modelBukuPopulers, Context context, ChangeNumberItemListener changeNumberItemListener) {
         this.modelBukuPopulers = modelBukuPopulers;
-        this.managementCart = managementCart;
+        this.managementCart = new ManagementCart(context);
         this.changeNumberItemListener = changeNumberItemListener;
     }
 
@@ -69,10 +70,6 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.MyViewHolder> 
                 });
             }
         });
-
-
-
-
     }
 
     @Override

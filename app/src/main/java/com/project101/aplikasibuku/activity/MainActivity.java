@@ -4,8 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.project101.aplikasibuku.R;
 import com.project101.aplikasibuku.adapter.AdapterBukuPopuler;
 import com.project101.aplikasibuku.adapter.AdapterListBuku;
@@ -25,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerBuku();
         recyclerPopuler();
+        botomNavigation();
     }
 
 
@@ -42,6 +46,16 @@ public class MainActivity extends AppCompatActivity {
 
         adapterListBuku = new AdapterListBuku(listBuku);
         recyclerListBuku.setAdapter(adapterListBuku);
+    }
+    private void botomNavigation(){
+        FloatingActionButton floatingActionButton = findViewById(R.id.floatingBar);
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, CartActivity.class);
+                startActivity(intent);
+            }
+        });
     }
     private void recyclerPopuler() {
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
